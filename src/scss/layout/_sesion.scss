@@ -1,0 +1,12 @@
+.login,
+.registrar,
+.recuperar,
+.restablecido,
+.confirmar {
+  h1 {
+    @include tablet {
+      padding-top: 10rem;
+    }
+    padding-top: 6rem;
+  }
+}

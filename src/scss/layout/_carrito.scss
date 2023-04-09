@@ -1,0 +1,258 @@
+.carrito {
+  @include desktop {
+    &:hover {
+      transform: translateX(0);
+    }
+    z-index: 100 !important;
+  }
+  display: flex;
+  position: fixed !important;
+  right: 0;
+  z-index: 80;
+  transition: 0.3s;
+  transform: translateX(38rem);
+  height: 100vh !important;
+
+  .cerrar-carrito {
+    @include desktop {
+      display: none;
+    }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100% !important;
+    // height: 8rem !important;
+    margin: 3rem 0 !important;
+    padding-right: 4.9rem;
+    cursor: pointer;
+
+    svg {
+      transition: 0.5s;
+
+      &:hover {
+        transform: rotate(360deg) scale(1.2);
+      }
+    }
+  }
+
+  .cajita-img {
+    @include desktop {
+      cursor: default;
+    }
+    margin-top: 10rem;
+    cursor: pointer;
+    #contador {
+      position: absolute;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background-color: #ff3f3f;
+      color: $blanco;
+      left: -1rem;
+      top: 10rem;
+      animation: contador 1.5s linear infinite both;
+    }
+    img {
+      margin-top: 0 !important;
+    }
+
+    @keyframes contador {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+  img {
+    width: 5rem;
+    height: 5rem;
+    background-color: $celeste;
+    padding: 1rem;
+    margin-top: 5rem;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+
+  .lista-carrito {
+    width: 38rem;
+    height: 100vh !important;
+    background-color: $blanco;
+    border-left: 1px solid #555555;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+      background-color: transparent;
+
+      img {
+        @include desktop {
+          margin-top: 5rem !important;
+        }
+        background-color: $blanco;
+        border-radius: 2rem;
+        border: 0.1rem solid $negro;
+        transition: 0.2s;
+        margin-top: 0 !important;
+        cursor: pointer;
+
+        &.actual,
+        &:hover {
+          background-color: $amarillo;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.rellenar {
+  display: none !important;
+  width: 90%;
+  margin: 0 auto !important;
+  overflow-y: scroll !important;
+
+  &.mostrar {
+    display: block !important;
+  }
+
+  &.ocultar {
+    display: none;
+  }
+}
+
+.paginacion {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 4rem !important;
+  button {
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1rem;
+      background-color: #333;
+      transform: translateX(100%);
+      transition: 0.3s;
+    }
+
+    &:nth-child(2)::after {
+      transform: translateX(-100%);
+    }
+
+    &:hover::after {
+      transform: translateX(0);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .ocultar {
+    display: none;
+  }
+}
+
+.producto-carro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #bbbbbb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  img {
+    width: 10rem !important;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+  }
+
+  div {
+    flex: 2;
+    margin-left: 1rem;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  button {
+    flex: 1;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      transform: translateY(-0.8rem);
+    }
+  }
+}
+
+.caja-datos-resumen {
+  margin: 2rem 0;
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.contenedor-sahumerios-datos {
+  display: flex;
+  margin: 3rem 0;
+  img {
+    width: 10rem;
+    height: 10rem;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+  }
+
+  .datos {
+    flex: 2;
+    margin-left: 1rem;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+.btn-resumen {
+  width: 100%;
+  margin: 4rem auto !important;
+}
+
+.contenido-lista-carrito,
+.contenido-resumen {
+  .totales {
+    letter-spacing: 3px;
+    font-size: 2.3rem;
+    margin: 3rem auto;
+    text-align: center;
+
+    span {
+      font-weight: 900;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "agust/base",
+  "description": "monique",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Agust\\Base\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Flores-AM",
+      "email": "agustinmatias62@gmail.com"
+    }
+  ],
+  "require": {
+    "intervention/image": "^2.7",
+    "phpmailer/phpmailer": "^6.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Model\\": "./models",
+      "MVC\\": "./",
+      "Controllers\\": "./controllers",
+      "Classes\\": "./classes"
+    }
+  }
+}

@@ -5,7 +5,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
 require 'funciones.php';
-require 'config/database.php';
+require 'database.php';
 
 // Conectarse a BD
 $db = conectarDB();

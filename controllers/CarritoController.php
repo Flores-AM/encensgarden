@@ -32,7 +32,7 @@ class CarritoController {
 
     foreach($idProductos as $cantidad => $idProducto) {
       $args = [
-          'direccion_id' => $id,
+          'direcciones_id' => $id,
           'sahumerios_id' => $idProducto,
           'cantidad' => $cantidades[$cantidad]
         ];

@@ -39,7 +39,7 @@ class Email {
 
     $contenido = "<html>";
     $contenido .= "<p><strong>¡Hola " . $this->nombre . "!</strong> creaste tu cuenta en Encens & Garden, por favor visita el enlace que te enviamos para confirmar tu identidad.</p>";
-    $contenido .= "<p>Presiona acá: <a href='http://localhost:3000/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
+    $contenido .= "<p>Presiona acá: <a href='https://cryptic-earth-49391.herokuapp.com/confirmar-cuenta?token=" . $this->token . "'>Confirmar Cuenta</a></p>";
     $contenido .= "<p>Si no solicitaste esta cuenta, podes ignorar este mensaje</p>";
     $contenido .= "</html>";
     $email->Body = $contenido;
@@ -70,7 +70,7 @@ class Email {
 
     $contenido = "<html>";
     $contenido .= "<p><strong>¡Hola " . $this->nombre . "!</strong> Nos solicitaste reestablecer tu password, ingresa al siguiente enlace para que podamos continuar</p>";
-    $contenido .= "<p>Presiona acá: <a href='http://localhost:3000/recuperar?token=" . $this->token . "'>Reestablecer password</a></p>";
+    $contenido .= "<p>Presiona acá: <a href='https://cryptic-earth-49391.herokuapp.com/recuperar?token=" . $this->token . "'>Reestablecer password</a></p>";
     $contenido .= "<p>Si no solicitaste esta cuenta, podes ignorar este mensaje</p>";
     $contenido .= "</html>";
     $email->Body = $contenido;

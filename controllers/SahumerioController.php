@@ -159,7 +159,7 @@
     $consulta .= " LEFT OUTER JOIN usuarios ";
     $consulta .= " ON direcciones.usuarios_id=usuarios.id  ";
     $consulta .= " LEFT OUTER JOIN direccionproductos ";
-    $consulta .= " ON direccionproductos.direccion_id=direcciones.id ";
+    $consulta .= " ON direccionproductos.direcciones_id=direcciones.id ";
     $consulta .= " LEFT OUTER JOIN sahumerios ";
     $consulta .= " ON sahumerios.id=direccionproductos.sahumerios_id";
 

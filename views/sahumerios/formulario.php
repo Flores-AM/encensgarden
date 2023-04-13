@@ -17,7 +17,7 @@
         </div>
 
         <div>
-          <input type="file" name="sahumerio['imagen']" id="imagen" accept="image/jpeg, image/png">
+          <input type="file" name="sahumerio[imagen]" id="imagen" accept="image/jpeg, image/png">
           <label for="imagen"><span>Imagen</span></label>
         </div>
 

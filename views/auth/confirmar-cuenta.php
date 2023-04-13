@@ -7,6 +7,6 @@
 
 
   <div class="align-center">
-    <a href="/login" class="boton">Iniciar Sesion</a>
+    <a href="/login" class="boton"><span>Iniciar Sesion</span></a>
   </div>
 </section>

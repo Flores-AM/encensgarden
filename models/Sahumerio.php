@@ -37,14 +37,14 @@ class Sahumerio extends ActiveRecord {
   if(!$this->precio) {
     self::$errores[] = "El precio es obligatorio";
   }
+  if(!$this->imagen) {
+    self::$errores[] = "La imagen es obligatoria";
+  }
   if(strlen($this->descripcion) < 50) {
     self::$errores[] = "Debes añadir una descripcion con minimo 50 caracteres";
   }
   if(!$this->stock) {
     self::$errores[] = "Debes añadir el stock disponible";
-  }
-  if(!$this->imagen) {
-    self::$errores[] = "La imagen es obligatoria";
   }
 
   return self::$errores;

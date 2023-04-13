@@ -65,7 +65,7 @@
         $image->save(CARPETA_IMAGENES . $nombreImagen);
         
         // Guardar en la BD
-        $sahumerio->guardar();
+        $sahumerio->guardarUsuario();
       }
     }
 

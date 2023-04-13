@@ -50,7 +50,6 @@
         // fit->(800,600);
         $sahumerio->setImagen($nombreImagen);
       }
-
       // Validar
       $errores = $sahumerio->validar();
 
@@ -105,17 +104,17 @@
           // fit->(800,600);
           $sahumerio->setImagen($nombreImagen);
         }
-
+        
         // Revisar que el arreglo de errores este vacio
         if(empty($errores)) {
           if($_FILES['sahumerio']['tmp_name']['imagen']) {
             // Almacenar la imagen
             $image->save(CARPETA_IMAGENES . $nombreImagen);
           }
-
+          
           $sahumerio->guardar();
         }
-  }
+      }
 
     $router->render('/sahumerios/actualizar', [
       'sahumerio' => $sahumerio,

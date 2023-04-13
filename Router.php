@@ -24,7 +24,7 @@ namespace MVC;
       // Arreglo de rutas protegidas
       $rutas_protegidas = ['/admin', '/sahumerios/crear', '/sahumerios/actualizar', '/sahumerios/eliminar', '/plantas/crear', '/plantas/actualizar', '/plantas/eliminar'];
 
-      $urlActual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+      $urlActual = strtok($_SERVER['REQUEST_URI'], '?' ) ?? '/';
       $metodo = $_SERVER['REQUEST_METHOD'];
 
       if($metodo === 'GET') {

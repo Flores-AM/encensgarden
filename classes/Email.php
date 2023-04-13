@@ -22,15 +22,22 @@ class Email {
     // Crear el objeto de email
     $email = new PHPMailer();
     $email->isSMTP();
-    $email->Host = 'sandbox.smtp.mailtrap.io';
+    // $email->Host = 'sandbox.smtp.mailtrap.io';
+    $email->Host = 'smtp.gmail.com';
+    $email->SMTPDebug= 2;
+    $email->Mailer= "smtp";
     $email->SMTPAuth = true;
-    $email->Port = 2525;
-    $email->Username = '7f7a6941c9f2a9';
-    $email->Password = 'eb7fa85b8daf52';
+    // $email->Port = 2525;
+    // $email->Username = '7f7a6941c9f2a9';
+    // $email->Password = 'eb7fa85b8daf52';
+    $email->Port = 587;
+    $email->Username = 'agustinmatias62@gmail.com';
+    $email->Password = 'ubjgawmchvfvdzui';
+    $email->Priority = 1;
     $email->SMTPSecure = 'tls';
 
-    $email->setFrom($this->email);
-    $email->addAddress('monique@encens.com', 'encens&garden.com');
+    $email->addAddress($this->email);
+    $email->setFrom('monique@encens.com', 'encens&garden.com');
     $email->Subject = 'Confirma tu cuenta';
 
     // Set HTML

@@ -45,8 +45,8 @@
 
       // Setear la imagen
       // Realiza un resize a la imagen con intervention image
-      if($_FILES['sahumerio']['tmp_name']['imagen']) {
-        $image = Image::make($_FILES['sahumerio']['tmp_name']['imagen']);
+      if($_FILES['tmp_name']['imagen']) {
+        $image = Image::make($_FILES['tmp_name']['imagen']);
         // fit->(800,600);
         $sahumerio->setImagen($nombreImagen);
       }

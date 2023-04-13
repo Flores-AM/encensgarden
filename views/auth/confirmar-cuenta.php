@@ -1,4 +1,4 @@
-<section class="contenedor seccion contenido-centrado corfirmar">
+<section class="contenedor seccion contenido-centrado confirmar">
     <h1>Confirmar Cuenta</h1>
 
     <?php

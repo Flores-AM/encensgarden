@@ -24,7 +24,7 @@ class Email {
     $email->isSMTP();
     // $email->Host = 'sandbox.smtp.mailtrap.io';
     $email->Host = 'smtp.gmail.com';
-    $email->SMTPDebug= 2;
+    $email->SMTPDebug= 0;
     $email->Mailer= "smtp";
     $email->SMTPAuth = true;
     // $email->Port = 2525;

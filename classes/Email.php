@@ -52,7 +52,12 @@ class Email {
     $email->Body = $contenido;
 
     // Enviar email
-    $email->send();
+    // $email->send();
+    if($email->send()){ 
+            echo ' ';
+        }else{
+            echo ' ';
+        }
 
   }
 

@@ -84,8 +84,8 @@ class PaginasController {
       // Configurar el contenido del mail
       // $mail->setFrom('monique@encens.com');
       // $mail->addAddress('agustinflores_wd@icloud.com');
-      $mail->addAddress('Encens & Garden');
-      $mail->setFrom('monique@encens.com', $respuestas['email']);
+      $mail->addAddress('agustinmatias62@gmail.com', 'Encens & Garden');
+      $mail->setFrom('Encens & Garden', 'Encens & Garden');
       $mail->Subject = 'Tienes un Nuevo Mensaje';
 
       // Habilitar HTML
@@ -94,7 +94,7 @@ class PaginasController {
 
       // Definir el contenido
       $contenido = '<html>';
-      $contenido .= '<p>Tienes un nuevo mensaje</p>';
+      $contenido .= '<p>Encens & Garden</p>';
       $contenido .= '<p>Nombre: ' . $respuestas['nombre'] . ' </p>';
       $contenido .= '<p>email: ' . $respuestas['email'] . ' </p>';
       $contenido .= '<p>celular: ' . $respuestas['celular'] . ' </p>';

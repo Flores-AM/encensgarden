@@ -67,16 +67,25 @@ class PaginasController {
 
       // Configurar SMTP
       $mail->isSMTP();
-      $mail->Host = 'sandbox.smtp.mailtrap.io';
+      // $mail->Host = 'sandbox.smtp.mailtrap.io';
+      $mail->Host = 'smtp.gmail.com';
+      $mail->SMTPDebug= 0;
+      $mail->Mailer= "smtp";
       $mail->SMTPAuth = true;
-      $mail->Username = '924d735cb4ac0f';
-      $mail->Password = '0beddf60de637d';
+      // $mail->Username = '924d735cb4ac0f';
+      // $mail->Password = '0beddf60de637d';
+      $mail->Port = 587;
+      $mail->Username = 'agustinmatias62@gmail.com';
+      $mail->Password = 'ubjgawmchvfvdzui';
+      $mail->Priority = 1;
       $mail->SMTPSecure = 'tls';
-      $mail->Port = 2525;
+      // $mail->Port = 2525;
 
       // Configurar el contenido del mail
-      $mail->setFrom('monique@encens.com');
-      $mail->addAddress('agustinflores_wd@icloud.com');
+      // $mail->setFrom('monique@encens.com');
+      // $mail->addAddress('agustinflores_wd@icloud.com');
+      $mail->addAddress('Encens & Garden');
+      $mail->setFrom('monique@encens.com', $respuestas['email']);
       $mail->Subject = 'Tienes un Nuevo Mensaje';
 
       // Habilitar HTML

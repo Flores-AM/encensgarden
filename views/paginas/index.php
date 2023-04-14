@@ -71,7 +71,7 @@
          </div>
          <div class="info">
             <div class="main">Porta Sahumerios</div>
-            <div class="sub">tincidunt tortor aliquam nulla facilisi</div>
+            <div class="sub">Esencial para nuestros productos</div>
          </div>
       </div>
    </div>
@@ -84,7 +84,7 @@
          </div>
          <div class="info">
             <div class="main">Siete Chakras</div>
-            <div class="sub">massa tincidunt nunc pulvinar sapien</div>
+            <div class="sub">Los 7 defumantes que necesitas</div>
          </div>
       </div>
    </div>
@@ -97,7 +97,7 @@
          </div>
          <div class="info">
             <div class="main">Cinco Elementos</div>
-            <div class="sub">iaculis urna id volutpat lacus</div>
+            <div class="sub">Agua, Aire, Fuego, Tierra y Éter</div>
          </div>
       </div>
    </div>
@@ -109,8 +109,8 @@
             <img src="/build/img/inciensoso.png" alt="">
          </div>
          <div class="info">
-            <div class="main">Defumacion</div>
-            <div class="sub">tristique risus nec feugiat in</div>
+            <div class="main">Defumacion Activada</div>
+            <div class="sub">Pastillas de incienso, defumantes</div>
          </div>
       </div>
    </div>
@@ -123,7 +123,7 @@
          </div>
          <div class="info">
             <div class="main">Sahumerio en Polvo</div>
-            <div class="sub">urna neque viverra justo nec</div>
+            <div class="sub">Para sahumerio o defumacion</div>
          </div>
       </div>
    </div>
@@ -136,7 +136,7 @@
          </div>
          <div class="info">
             <div class="main">Triple Combinado</div>
-            <div class="sub">posuere lorem ipsum dolor sit</div>
+            <div class="sub">ideal para limpieza energética</div>
          </div>
       </div>
    </div>
@@ -149,7 +149,7 @@
          </div>
          <div class="info">
             <div class="main">Maha Blend Masala</div>
-            <div class="sub">elit eget gravida cum sociis</div>
+            <div class="sub">El sol, la luna y las estrellas</div>
          </div>
       </div>
    </div>

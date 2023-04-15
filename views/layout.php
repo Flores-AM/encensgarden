@@ -118,12 +118,7 @@ if(!isset($mostrarPregs)) {
         <div class='contenido-resumen'>
           <h3>Resumen</h3>
         </div>
-        <?php if(!$auth): ?>
-          <div class='caja-iniciar-resumen align-center'>
-            <p class='alerta'>Debes Iniciar Sesión</p>
-            <a href='/login' class='boton ini-resumen'><span>Iniciar Sesión</span></a>
-          </div>
-        <?php endif; ?>
+        
       </div>
 
       <div class='paginacion'>

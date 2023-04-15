@@ -1,4 +1,4 @@
-<main class="contenedor seccion actualizar">
+<main class="contenedor seccion actualizar-form">
     <h1>Actualizar Producto</h1>
 
     <?php foreach($errores as $error): ?>

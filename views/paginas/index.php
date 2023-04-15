@@ -1,3 +1,4 @@
+<?php $mostrarPregs = true; ?>
 <header>
     <h1>Encens & Garden</h1>
 

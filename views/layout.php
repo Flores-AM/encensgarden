@@ -10,8 +10,12 @@ $auth = $_SESSION['login'] ?? false;
 $nombre = $_SESSION['nombre'] ?? false;
 $idUser = $_SESSION['id'] ?? false;
 
-if(!isset($inicio)) {
-  $inicio = false;
+if(!isset($mostrar)) {
+  $mostrar = false;
+}
+
+if(!isset($mostrarPregs)) {
+  $mostrarPregs = false;
 }
 
 ?>
@@ -44,6 +48,7 @@ if(!isset($inicio)) {
     <?php endif; ?>
   </nav>
 
+  <?php echo $mostrar ? '
   <div class="carrito">
     <div class="cajita-img">
       <span id="contador">0</span>
@@ -126,46 +131,50 @@ if(!isset($inicio)) {
 
     </div>
   </div>
+  ' : "" ?>
+
 
 <?php echo $contenido; ?>
 
+<?php echo $mostrarPregs ? '
 <section class="seccion contenedor">
-   <div class="container-acordion">
-  <h2>Preguntas Frecuentes</h2>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">¿Hacen envios a mi domicilio?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Si, hacemos entregas a domicilio si recidis en la zona 'General Pacheco' o alrededores, si excedes el limite se puede coordinar un punto de encuentro para realizar la entrega. </p>
+  <div class="container-acordion">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">¿Hacen envios a mi domicilio?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Si, hacemos entregas a domicilio si recidis en la zona "General Pacheco" o alrededores, si excedes el limite se puede coordinar un punto de encuentro para realizar la entrega. </p>
+        </div>
       </div>
+      <div class="accordion-item">
+        <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Carrito de compras no me deja seleccionar la cantidad de productos que deseo...</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Claro, esto es debido a que el maximo stock actual del producto es esa misma cantidad, cuando haya un reingreso el stock se actualizara automaticamente</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">¿Tienen metodos de pago en linea?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Estamos trabajando en eso, proximamente lo estaremos incluyendo !</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">No encuentro el producto que deseo :(</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Si es un producto de nuestro catalogo no te preocupes, el reingreso no tarda! Si no es el caso, dejanos tu mensaje <a id="aca" href="/contacto">acá</a> con el producto que te gustaria que ingresaramos :)</p>
+        </div>
+      </div>
+      <!-- <div class="accordion-item">
+        <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+        <div class="accordion-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        </div>
+      </div> -->
     </div>
-    <div class="accordion-item">
-      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Carrito de compras no me deja seleccionar la cantidad de productos que deseo...</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Claro, esto es debido a que el maximo stock actual del producto es esa misma cantidad, cuando haya un reingreso el stock se actualizara automaticamente</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">¿Tienen metodos de pago en linea?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Estamos trabajando en eso, proximamente lo estaremos incluyendo !</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">No encuentro el producto que deseo :(</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Si es un producto de nuestro catalogo no te preocupes, el reingreso no tarda! Si no es el caso, dejanos tu mensaje <a id="aca" href="/contacto">acá</a> con el producto que te gustaria que ingresaramos :)</p>
-      </div>
-    </div>
-    <!-- <div class="accordion-item">
-      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-      </div>
-    </div> -->
   </div>
-</div>
 </section>
+' : "" ?>
 
 <script src="../build/js/bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

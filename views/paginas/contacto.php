@@ -1,3 +1,10 @@
+<?php 
+
+$mostrarPregs = true;
+
+$auth = $_SESSION['login'] ?? false;
+
+?>
 <section class="seccion contenedor align-center contacto-form">
 
   <h1>Contactanos</h1>
@@ -30,16 +37,22 @@
           <label for="mensaje"><span>Mensaje</span></label>
       </div>
     </fieldset>
-    <div class="container-btn">
-    <a class="button">
-      <div class="button__line"></div>
-      <div class="button__line"></div>
-      <input type="submit" value="Enviar" class="button__text">
-      <p class="button__text"></p>
-      <div class="button__drow1 violeta"></div>
-      <div class="button__drow2 violeta"></div>
-    </a>
-    </div>
+
+    <?php if($auth): ?>
+      <div class="container-btn">
+        <a class="button">
+          <div class="button__line"></div>
+          <div class="button__line"></div>
+          <input type="submit" value="Enviar" class="button__text">
+          <p class="button__text"></p>
+          <div class="button__drow1 violeta"></div>
+          <div class="button__drow2 violeta"></div>
+        </a>
+      </div>
+    <?php endif; ?>
+    <?php if(!$auth): ?>
+      <p class="alerta">Debes iniciar sesion para contactarnos !</p>
+    <?php endif; ?>
       
   </form>
 </section>

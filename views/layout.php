@@ -51,85 +51,90 @@ if(!isset($mostrarPregs)) {
     <?php endif; ?>
   </nav>
 
-  <?php echo $mostrar ? '
-  <div class="carrito">
-    <div class="cajita-img">
-      <span id="contador">0</span>
-      <img class="img-carrito" src="/build/img/carrito-de-compras.png" alt="">
+  <?php echo $mostrar ? "
+  <div class='carrito'>
+    <div class='cajita-img'>
+      <span id='contador'>0</span>
+      <img class='img-carrito' src='/build/img/carrito-de-compras.png' alt=''>
     </div>
-    <div class="lista-carrito">
+    <div class='lista-carrito'>
 
-      <div class="cerrar-carrito">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
+      <div class='cerrar-carrito'>
+        <svg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-x' width='36' height='36' viewBox='0 0 24 24' stroke-width='1.5' stroke='#ff2825' fill='none' stroke-linecap='round' stroke-linejoin='round'>
+        <path stroke='none' d='M0 0h24v24H0z' fill='none'/>
+        <line x1='18' y1='6' x2='6' y2='18' />
+        <line x1='6' y1='6' x2='18' y2='18' />
         </svg>
       </div>
 
-      <div class="tabs">
-        <button type="button" ><img data-paso="1" class="actual img-btn" src="/build/img/echale-un-vistazo.png" alt=""></button>
-        <button type="button" ><img data-paso="2" class="img-btn" src="/build/img/caja-del-paquete.png" alt=""></button>
-        <button type="button" ><img data-paso="3" class="img-btn" src="/build/img/escritura.png" alt=""></button>
+      <div class='tabs'>
+        <button type='button' ><img data-paso='1' class='actual img-btn' src='/build/img/echale-un-vistazo.png' alt=''></button>
+        <button type='button' ><img data-paso='2' class='img-btn' src='/build/img/caja-del-paquete.png' alt=''></button>
+        <button type='button' ><img data-paso='3' class='img-btn' src='/build/img/escritura.png' alt=''></button>
       </div>
 
-      <div class="seccion rellenar contenido-lista-carrito" id="paso-1">
+      <div class='seccion rellenar contenido-lista-carrito' id='paso-1'>
         <h3>Tus Productos</h3>
-        <div class="lista-carro"></div>
-        <p class="totales">TOTAL: $<span id="total"></span></p>
+        <div class='lista-carro'></div>
+        <p class='totales'>TOTAL: $<span id='total'></span></p>
       </div>
 
-      <div class="seccion rellenar" id="paso-2">
+      <div class='seccion rellenar' id='paso-2'>
         <h3>Direccion de Entrega</h3>
-        <form class="formulario">
+        <form class='formulario'>
           <fieldset>
             <div>
-              <input type="text" id="nombre-venta" required>
-              <label for="nombre"><span>Nombre Completo</span></label>
+              <input type='text' id='nombre-venta' required>
+              <label for='nombre'><span>Nombre Completo</span></label>
             </div>
 
             <div>
-              <input type="tel" id="celular-venta"  required>
-              <label for="celular"><span>Celular</span></label>
+              <input type='tel' id='celular-venta'  required>
+              <label for='celular'><span>Celular</span></label>
             </div>
 
             <div>
-              <input type="text" id="direccion-venta"  required>
-              <label for="direccion"><span>Direccion</span></label>
+              <input type='text' id='direccion-venta'  required>
+              <label for='direccion'><span>Direccion</span></label>
             </div>
 
             <div>
-              <input type="text" id="entre-venta"  required>
-              <label for="entre"><span>Entre Calles</span></label>
+              <input type='text' id='entre-venta'  required>
+              <label for='entre'><span>Entre Calles</span></label>
             </div>
 
             <div>
-              <input type="tel" id="codigo-venta"  required>
-              <label for="codigo"><span>Codigo Postal</span></label>
+              <input type='tel' id='codigo-venta'  required>
+              <label for='codigo'><span>Codigo Postal</span></label>
             </div>
 
-            <input type="hidden" id="idUser" value="<?php echo $idUser; ?>">
+            <input type='hidden' id='idUser' value='<?php echo $idUser; ?>'>
 
           </fieldset>
         </form>
       </div>
 
-      <div class="seccion rellenar" id="paso-3">
-        <div class="contenido-resumen">
+      <div class='seccion rellenar' id='paso-3'>
+        <div class='contenido-resumen'>
           <h3>Resumen</h3>
         </div>
-        
+        <?php if(!$auth): ?>
+          <div class='caja-iniciar-resumen align-center'>
+            <p class='alerta'>Debes Iniciar Sesión</p>
+            <a href='/login' class='boton ini-resumen'><span>Iniciar Sesión</span></a>
+          </div>
+        <?php endif; ?>
       </div>
 
-      <div class="paginacion">
-        <button id="anterior" >&laquo; Anterior</button>
+      <div class='paginacion'>
+        <button id='anterior' >&laquo; Anterior</button>
 
-        <button id="siguiente" >Siguiente &raquo;</button>
+        <button id='siguiente' >Siguiente &raquo;</button>
       </div>
 
     </div>
   </div>
-  ' : "" ?>
+  " : "" ?>
 
 
 <?php echo $contenido; ?>

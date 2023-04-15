@@ -9,16 +9,10 @@ use MVC\Router;
 
 class CarritoController {
 
-  public static function carrito(Router $router) {
-
-    $auth = $_SESSION['LOGIN'];
+  public static function carrito() {
 
     $sahumerios = Sahumerio::all();
     echo json_encode($sahumerios);
-
-    $router->render('api/venta', [
-      'auth' => $auth
-    ]);
 
   }
 

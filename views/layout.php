@@ -30,6 +30,9 @@ if(!isset($mostrarPregs)) {
   <link rel="stylesheet" href="../build/css/app.css">
 </head>
 <body class="body">
+  <?php if($auth): ?>
+    <p id="autenticado"></p>
+  <?php endif; ?>
   <nav class="nav <?php echo $inicio ? 'inicio' : ''; ?>">
     <div id="marker"></div>
     <a href="/">Inicio</a>
@@ -115,12 +118,7 @@ if(!isset($mostrarPregs)) {
         <div class="contenido-resumen">
           <h3>Resumen</h3>
         </div>
-        <?php if(!$auth): ?>
-          <div class="caja-iniciar-resumen align-center">
-            <p class="alerta">Debes Iniciar Sesión</p>
-            <a href="/login" class="boton ini-resumen"><span>Iniciar Sesión</span></a>
-          </div>
-        <?php endif; ?>
+        
       </div>
 
       <div class="paginacion">

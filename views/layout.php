@@ -30,9 +30,7 @@ if(!isset($mostrarPregs)) {
   <link rel="stylesheet" href="../build/css/app.css">
 </head>
 <body class="body">
-  <?php if(!$auth === false): ?>
-    <p id="autenticado"></p>
-  <?php endif; ?>
+  <p id="<?php if($auth){echo 'autenticado';} else {echo 'noAutenticado';} ?>"></p>
   <nav class="nav <?php echo $inicio ? 'inicio' : ''; ?>">
     <div id="marker"></div>
     <a href="/">Inicio</a>

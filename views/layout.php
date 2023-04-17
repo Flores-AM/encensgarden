@@ -30,7 +30,7 @@ if(!isset($mostrarPregs)) {
   <link rel="stylesheet" href="../build/css/app.css">
 </head>
 <body class="body">
-  <?php if($auth): ?>
+  <?php if(!$auth === false): ?>
     <p id="autenticado"></p>
   <?php endif; ?>
   <nav class="nav <?php echo $inicio ? 'inicio' : ''; ?>">

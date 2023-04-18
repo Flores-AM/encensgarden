@@ -35,7 +35,7 @@
         <legend>Stock Disponible</legend>
 
         <div>
-          <input type="number" name="sahumerio[stock]" id="stock" value="<?php echo s($sahumerio->stock); ?>" min="1" max="20" required>
+          <input type="number" name="sahumerio[stock]" id="stock" value="<?php echo s($sahumerio->stock); ?>" min="0" max="20" required>
           <label for="stock"><span>Stock</span></label>
         </div>
 

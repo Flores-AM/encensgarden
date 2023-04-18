@@ -43,7 +43,7 @@ class Sahumerio extends ActiveRecord {
   if(strlen($this->descripcion) < 50) {
     self::$errores[] = "Debes añadir una descripcion con minimo 50 caracteres";
   }
-  if(!$this->stock) {
+  if(strlen($this->stock) < 0) {
     self::$errores[] = "Debes añadir el stock disponible";
   }
 

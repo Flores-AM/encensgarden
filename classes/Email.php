@@ -19,6 +19,9 @@ class Email {
 
   public function enviarConfirmacion() {
 
+    $mail = 'agustinmatias62@gmail.com';
+    $pass = 'iyhyfpdgfbqjnslx';
+
     // Crear el objeto de email
     $email = new PHPMailer();
     $email->isSMTP();
@@ -31,8 +34,8 @@ class Email {
     // $email->Username = '7f7a6941c9f2a9';
     // $email->Password = 'eb7fa85b8daf52';
     $email->Port = 587;
-    $email->Username = 'agustinmatias62@gmail.com';
-    $email->Password = 'ubjgawmchvfvdzui';
+    $email->Username = $mail;
+    $email->Password = $pass;
     $email->Priority = 1;
     $email->SMTPSecure = 'tls';
 
@@ -62,6 +65,10 @@ class Email {
   }
 
   public function enviarInstrucciones() {
+
+    $mail = 'agustinmatias62@gmail.com';
+    $pass = 'iyhyfpdgfbqjnslx';
+
     // Crear el objeto de email
     $email = new PHPMailer();
     $email->isSMTP();
@@ -74,8 +81,8 @@ class Email {
     // $email->Username = '7f7a6941c9f2a9';
     // $email->Password = 'eb7fa85b8daf52';
     $email->Port = 587;
-    $email->Username = 'agustinmatias62@gmail.com';
-    $email->Password = 'ubjgawmchvfvdzui';
+    $email->Username = $mail;
+    $email->Password = $pass;
     $email->Priority = 1;
     $email->SMTPSecure = 'tls';
 

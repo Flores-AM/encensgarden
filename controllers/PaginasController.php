@@ -65,6 +65,9 @@ class PaginasController {
 
       $mail = new PHPMailer();
 
+      $email = 'agustinmatias62@gmail.com';
+      $pass = 'iyhyfpdgfbqjnslx';
+
       // Configurar SMTP
       $mail->isSMTP();
       // $mail->Host = 'sandbox.smtp.mailtrap.io';
@@ -75,8 +78,8 @@ class PaginasController {
       // $mail->Username = '924d735cb4ac0f';
       // $mail->Password = '0beddf60de637d';
       $mail->Port = 587;
-      $mail->Username = 'agustinmatias62@gmail.com';
-      $mail->Password = 'ubjgawmchvfvdzui';
+      $mail->Username = $email;
+      $mail->Password = $pass;
       $mail->Priority = 1;
       $mail->SMTPSecure = 'tls';
       // $mail->Port = 2525;
